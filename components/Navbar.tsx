@@ -2,7 +2,7 @@
 
 import { Home, User } from "lucide-react"; // Hapus Settings
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { GoProject } from "react-icons/go";
 import { IoMdBook } from "react-icons/io";
 
