@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, User, Settings } from "lucide-react";
+import { Home, User } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { GoProject } from "react-icons/go";
