@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s - Portofolio",
   },
   description:
-    "Joki Ndess's Professional web development services for your business",
+    "Portofolio Samodra Wijaya Samdoria",
   icons: {
     icon: ["/samm4.png"],
   },

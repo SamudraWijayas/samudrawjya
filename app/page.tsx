@@ -7,13 +7,13 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="bg-neutral-950">
+    <div>
       <Navbar />
       <Hero />
       <About />
-      <Project/>
-      <GuestBook/>
-      <Footer/>
+      <Project />
+      <GuestBook />
+      <Footer />
     </div>
   );
 }
