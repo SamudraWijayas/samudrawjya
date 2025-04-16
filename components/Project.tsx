@@ -73,12 +73,12 @@ const Project = () => {
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
                   <Image
-                    src={projek.image || "/samm4.png"} // Gunakan projek.image jika ada, jika tidak pakai samm4.png
-                    layout="fill"
-                    objectFit="cover"
-                    priority
-                    className="rounded-lg shadow-lg"
+                    src={projek.image || "/samm4.png"}
                     alt={projek.title}
+                    width={500}
+                    height={300}
+                    style={{ objectFit: "cover" }}
+                    className="rounded-lg shadow-lg"
                   />
                 </div>
               </div>

@@ -12,6 +12,15 @@ const Hero = () => {
         <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
           Front End Developer
         </p>
+        <div className="relative z-10 mt-6 flex justify-center">
+          <a
+            href="https://drive.google.com/file/d/1k97noZZnf4ZJP5y9uy1GE28Jubml_i1e/view?usp=sharing"
+            download
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition"
+          >
+            Download CV
+          </a>
+        </div>
       </div>
       <BackgroundBeams />
     </div>
