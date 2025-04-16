@@ -4,7 +4,7 @@ import { PinContainer } from "./ui/3d-pin";
 import Image from "next/image";
 import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
 import { FaReact, FaNodeJs } from "react-icons/fa";
-
+import { BsBootstrap } from "react-icons/bs";
 
 // Mapping icon string ke komponen React
 const iconComponents: { [key: string]: JSX.Element } = {
@@ -12,6 +12,7 @@ const iconComponents: { [key: string]: JSX.Element } = {
   RiTailwindCssFill: <RiTailwindCssFill className="w-6 h-6 text-teal-400" />,
   FaNodeJs: <FaNodeJs className="w-6 h-6 text-green-500" />,
   RiNextjsLine: <RiNextjsLine className="w-6 h-6 text-gray-500" />,
+  BsBootstrap: <BsBootstrap className="w-6 h-6 text-purple-600" />,
 };
 
 const projects = [
@@ -31,6 +32,23 @@ const projects = [
       " joki pembuatan website untuk berbagai kebutuhan, mulai dari bisnis, portofolio, hingga sistem berbasis web",
     image: "/project/jokiNdes.png",
     icon: ["RiNextjsLine", "RiTailwindCssFill"],
+    link: "https://www.jokindess.com/",
+  },
+  {
+    id: 3,
+    title: "PRC Rental Mobil",
+    description: " jPRC Sewa Mobil Lampung",
+    image: "/project/prc.png",
+    icon: ["BsBootstrap"],
+    link: "https://prcsewamobillampung.vercel.app/",
+  },
+  {
+    id: 4,
+    title: "Yayasan Babunnajah",
+    description:
+      " Yayasan Babunnajah Almunawir merupakan lembaga pendidikan dasar dan menengah yang bernafaskan Islam dan bermutu di Provinsi Lampung.",
+    image: "/project/babunnajah.png",
+    icon: ["FaReact", "FaNodeJs", "RiTailwindCssFill"],
     link: "https://www.jokindess.com/",
   },
 ];
