@@ -5,6 +5,9 @@ import Image from "next/image";
 import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { BsBootstrap } from "react-icons/bs";
+import { FaFlutter } from "react-icons/fa6";
+import { IoLogoJavascript } from "react-icons/io";
+
 
 // Mapping icon string ke komponen React
 const iconComponents: { [key: string]: JSX.Element } = {
@@ -13,6 +16,8 @@ const iconComponents: { [key: string]: JSX.Element } = {
   FaNodeJs: <FaNodeJs className="w-6 h-6 text-green-500" />,
   RiNextjsLine: <RiNextjsLine className="w-6 h-6 text-gray-500" />,
   BsBootstrap: <BsBootstrap className="w-6 h-6 text-purple-600" />,
+  FaFlutter: <FaFlutter className="w-6 h-6 text-blue-500" />,
+  IoLogoJavascript: <IoLogoJavascript className="w-6 h-6 text-yellow-300" />,
 };
 
 const projects = [
@@ -37,9 +42,9 @@ const projects = [
   {
     id: 3,
     title: "PRC Rental Mobil",
-    description: " jPRC Sewa Mobil Lampung",
+    description: " PRC Sewa Mobil Lampung",
     image: "/project/prc.png",
-    icon: ["BsBootstrap"],
+    icon: ["IoLogoJavascript","BsBootstrap"],
     link: "https://prcsewamobillampung.vercel.app/",
   },
   {
@@ -49,7 +54,16 @@ const projects = [
       " Yayasan Babunnajah Almunawir merupakan lembaga pendidikan dasar dan menengah yang bernafaskan Islam dan bermutu di Provinsi Lampung.",
     image: "/project/babunnajah.png",
     icon: ["FaReact", "FaNodeJs", "RiTailwindCssFill"],
-    link: "https://www.jokindess.com/",
+    link: "https://babunnajah.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Aplikasi Absensi QR Code",
+    description:
+      "Aplikasi berbasis android yang dibuat menggunakan flutter untuk absensi menggunakan QR Code",
+    image: "/project/absen.png",
+    icon: ["FaFlutter", "FaNodeJs"],
+    link: "",
   },
 ];
 
@@ -70,18 +84,16 @@ const Project = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
           >
             <PinContainer title={projek.title} href={projek.link}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                  <Image
-                    src={projek.image || "/samm4.png"}
-                    alt={projek.title}
-                    width={500}
-                    height={300}
-                    style={{ objectFit: "cover" }}
-                    className="rounded-lg shadow-lg"
-                  />
-                </div>
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] h-[20vh] lg:h-[30vh] mb-10 rounded-3xl overflow-hidden bg-[#13162d]">
+                <Image
+                  src={projek.image || "/samm4.png"}
+                  alt={projek.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
+
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {projek.title}
               </h1>

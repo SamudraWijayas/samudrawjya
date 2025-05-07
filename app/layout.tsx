@@ -19,9 +19,6 @@ export const metadata: Metadata = {
   },
   description:
     "Portofolio Samodra Wijaya Samdoria",
-  icons: {
-    icon: ["/samm4.png"],
-  },
 };
 
 export default function RootLayout({
