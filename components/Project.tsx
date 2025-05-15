@@ -3,10 +3,11 @@ import React, { JSX } from "react";
 import { PinContainer } from "./ui/3d-pin";
 import Image from "next/image";
 import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
-import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
+import { FaReact, FaNodeJs,FaPython } from "react-icons/fa";
 import { BsBootstrap } from "react-icons/bs";
 import { FaFlutter } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
+
 
 // Mapping icon string ke komponen React
 const iconComponents: { [key: string]: JSX.Element } = {
@@ -17,7 +18,8 @@ const iconComponents: { [key: string]: JSX.Element } = {
   BsBootstrap: <BsBootstrap className="w-6 h-6 text-purple-600" />,
   FaFlutter: <FaFlutter className="w-6 h-6 text-blue-500" />,
   IoLogoJavascript: <IoLogoJavascript className="w-6 h-6 text-yellow-300" />,
-  FaPython: <FaPython className="w-6 h-6 text-yellow-300" />,
+    FaPython: <FaPython className="w-6 h-6 text-yellow-300" />,
+  
 };
 
 const projects = [
@@ -44,7 +46,7 @@ const projects = [
     title: "PRC Rental Mobil",
     description: " PRC Sewa Mobil Lampung",
     image: "/project/prc.png",
-    icon: ["IoLogoJavascript", "BsBootstrap"],
+    icon: ["IoLogoJavascript","BsBootstrap"],
     link: "https://prcsewamobillampung.vercel.app/",
   },
   {
@@ -65,7 +67,7 @@ const projects = [
     icon: ["FaFlutter", "FaNodeJs"],
     link: "",
   },
-  {
+    {
     id: 6,
     title: "Aplikasi Sewa Bus",
     description:
@@ -90,10 +92,10 @@ const Project = () => {
         {projects.map((projek) => (
           <div
             key={projek.id}
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-[25em] w-full"
+            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center w-96"
           >
             <PinContainer title={projek.title} href={projek.link}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] h-[20vh] lg:h-[30vh] mb-10 rounded-3xl overflow-hidden bg-[#13162d]">
+              <div className="relative flex items-center justify-center sm:w-96 w-80 h-[20vh] lg:h-[30vh] mb-10 rounded-3xl overflow-hidden bg-[#13162d]">
                 <Image
                   src={projek.image || "/samm4.png"}
                   alt={projek.title}
