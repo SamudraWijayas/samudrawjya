@@ -21,7 +21,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <BackgroundBeams />
+      {/* <BackgroundBeams /> */}
     </div>
   );
 };

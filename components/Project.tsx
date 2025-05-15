@@ -3,11 +3,10 @@ import React, { JSX } from "react";
 import { PinContainer } from "./ui/3d-pin";
 import Image from "next/image";
 import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
-import { FaReact, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import { BsBootstrap } from "react-icons/bs";
 import { FaFlutter } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
-
 
 // Mapping icon string ke komponen React
 const iconComponents: { [key: string]: JSX.Element } = {
@@ -18,6 +17,7 @@ const iconComponents: { [key: string]: JSX.Element } = {
   BsBootstrap: <BsBootstrap className="w-6 h-6 text-purple-600" />,
   FaFlutter: <FaFlutter className="w-6 h-6 text-blue-500" />,
   IoLogoJavascript: <IoLogoJavascript className="w-6 h-6 text-yellow-300" />,
+  FaPython: <FaPython className="w-6 h-6 text-yellow-300" />,
 };
 
 const projects = [
@@ -42,9 +42,10 @@ const projects = [
   {
     id: 3,
     title: "PRC Rental Mobil",
-    description: " PRC Sewa Mobil Lampung",
+    description:
+      "Website sewa mobil yang menggabungkan kenyamanan, keandalan, dan kemewahan dalam setiap perjalanan",
     image: "/project/prc.png",
-    icon: ["IoLogoJavascript","BsBootstrap"],
+    icon: ["IoLogoJavascript", "BsBootstrap"],
     link: "https://prcsewamobillampung.vercel.app/",
   },
   {
@@ -64,6 +65,15 @@ const projects = [
     image: "/project/absen.png",
     icon: ["FaFlutter", "FaNodeJs"],
     link: "",
+  },
+  {
+    id: 6,
+    title: "Aplikasi Sewa Bus",
+    description:
+      "Aplikasi Abdroid untuk menentukan Harga Sewa Bus Pariwisata Menggunakan Algoritma Decision Tree",
+    image: "/project/bus.jpg",
+    icon: ["FaFlutter", "FaPython"],
+    link: "https://github.com/SamudraWijayas/bus-rental-application.git",
   },
 ];
 
@@ -97,7 +107,7 @@ const Project = () => {
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {projek.title}
               </h1>
-              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
+              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-3">
                 {projek.description}
               </p>
               <div className="flex items-center justify-start mt-7 mb-3 space-x-3">
