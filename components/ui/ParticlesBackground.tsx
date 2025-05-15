@@ -68,7 +68,7 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
   );
 
   return init ? (
-    <div className="w-full h-screen absolute top-0 left-0 -z-10">
+    <div className="w-20 h-screen absolute top-0 left-0 -z-10">
       <Particles id={id} particlesLoaded={particlesLoaded} options={options} />
     </div>
   ) : null;
