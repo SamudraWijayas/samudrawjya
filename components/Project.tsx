@@ -70,7 +70,7 @@ const projects = [
     id: 6,
     title: "Aplikasi Sewa Bus",
     description:
-      "Aplikasi Abdroid untuk menentukan Harga Sewa Bus Pariwisata Menggunakan Algoritma Decision Tree",
+      "Aplikasi Android untuk menentukan Harga Sewa Bus Pariwisata Menggunakan Algoritma Decision Tree",
     image: "/project/bus.jpg",
     icon: ["FaFlutter", "FaPython"],
     link: "https://github.com/SamudraWijayas/bus-rental-application.git",

@@ -1,5 +1,5 @@
 import "animate.css";
-// import { BackgroundBeams } from "../components/ui/background-beams";
+import { BackgroundBeams } from "../components/ui/background-beams";
 
 const Hero = () => {
   return (
@@ -21,7 +21,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      {/* <BackgroundBeams /> */}
+      <BackgroundBeams />
     </div>
   );
 };
