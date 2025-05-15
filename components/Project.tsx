@@ -90,7 +90,7 @@ const Project = () => {
         {projects.map((projek) => (
           <div
             key={projek.id}
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-[25em] w-full"
           >
             <PinContainer title={projek.title} href={projek.link}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] h-[20vh] lg:h-[30vh] mb-10 rounded-3xl overflow-hidden bg-[#13162d]">
