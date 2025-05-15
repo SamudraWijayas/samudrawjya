@@ -2,7 +2,6 @@
 
 import { Home, User } from "lucide-react"; // Hapus Settings
 import Link from "next/link";
-import { useEffect } from "react";
 import { GoProject } from "react-icons/go";
 import { IoMdBook } from "react-icons/io";
 
@@ -14,16 +13,9 @@ const navItems = [
 ];
 
 export default function BottomNavigation() {
-  useEffect(() => {
-    const handleResize = () => window.innerWidth < 768;
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
-    <nav className="fixed bottom-0 left-0 w-full bg-black/60 backdrop-blur-lg text-white shadow-lg p-2 md:static md:top-0 md:left-0 md:w-full md:h-auto md:flex md:justify-center z-50">
-      <ul className="flex justify-around md:justify-center md:gap-8">
+    <nav className="fixed bottom-0 left-0 w-full bg-black/60 backdrop-blur-lg text-white shadow-lg p-2 overflow-x-hidden md:static md:top-0 md:left-0 md:w-full md:h-auto md:flex md:justify-center z-50">
+      <ul className="flex flex-wrap justify-around md:justify-center md:gap-8">
         {navItems.map(({ name, href, icon: Icon }) => (
           <li key={name}>
             <Link

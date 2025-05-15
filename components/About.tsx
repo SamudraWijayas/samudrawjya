@@ -19,7 +19,7 @@ console.log("ParticlesBackground component is rendering!");
 const About = () => {
   return (
     <section
-      className="relative bg-blue-200 py-16 px-6 overflow-hidden"
+      className="relative bg-transparent py-16 px-6 overflow-hidden"
       id="about"
     >
       {/* Pastikan Particles berada di belakang */}
