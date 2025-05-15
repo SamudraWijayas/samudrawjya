@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-// import ParticlesBackground from "./ui/ParticlesBackground";
+import ParticlesBackground from "./ui/ParticlesBackground";
 import { FaReact, FaNodeJs, FaBootstrap } from "react-icons/fa";
 import {
   SiPhp,
@@ -23,7 +23,7 @@ const About = () => {
       id="about"
     >
       {/* Pastikan Particles berada di belakang */}
-      {/* <ParticlesBackground id="tsparticles" /> */}
+      <ParticlesBackground id="tsparticles" />
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="relative w-full h-80 md:h-[400px]">
