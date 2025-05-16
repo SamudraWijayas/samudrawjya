@@ -20,7 +20,7 @@ const iconComponents: { [key: string]: JSX.Element } = {
   FaReact: <FaReact className="w-6 h-6 text-blue-500" />,
   RiTailwindCssFill: <RiTailwindCssFill className="w-6 h-6 text-teal-400" />,
   FaNodeJs: <FaNodeJs className="w-6 h-6 text-green-500" />,
-  SiMongodb: <SiMongodb className="w-6 h-6 text-green-500" />,
+  SiMongodb: <SiMongodb className="w-6 h-6 text-green-700" />,
   RiNextjsLine: <RiNextjsLine className="w-6 h-6 text-gray-500" />,
   BsBootstrap: <BsBootstrap className="w-6 h-6 text-purple-600" />,
   FaFlutter: <FaFlutter className="w-6 h-6 text-blue-500" />,
@@ -105,7 +105,7 @@ const Project = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center"
           >
             <PinContainer title={projek.title} href={projek.link}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] h-[20vh] lg:h-[30vh] mb-10 rounded-3xl overflow-hidden bg-[#13162d]">
+              <div className="relative ">
                 <Image
                   src={projek.image || "/samm4.png"}
                   alt={projek.title}
