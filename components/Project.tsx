@@ -7,26 +7,20 @@ import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import { BsBootstrap } from "react-icons/bs";
 import { FaFlutter } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
-import {
-  SiExpress,
-  SiTypescript,
-  SiMongodb,
-  SiFlask,
-  SiMysql,
-} from "react-icons/si";
+import { SiExpress, SiTypescript, SiMongodb, SiFlask , SiMysql} from "react-icons/si";
 
 // Mapping icon string ke komponen React
 const iconComponents: { [key: string]: JSX.Element } = {
   FaReact: <FaReact className="w-6 h-6 text-blue-500" />,
   RiTailwindCssFill: <RiTailwindCssFill className="w-6 h-6 text-teal-400" />,
   FaNodeJs: <FaNodeJs className="w-6 h-6 text-green-500" />,
-  SiMongodb: <SiMongodb className="w-6 h-6 text-green-700" />,
+  SiMongodb: <SiMongodb className="w-6 h-6 text-green-500" />,
   RiNextjsLine: <RiNextjsLine className="w-6 h-6 text-gray-500" />,
   BsBootstrap: <BsBootstrap className="w-6 h-6 text-purple-600" />,
   FaFlutter: <FaFlutter className="w-6 h-6 text-blue-500" />,
   SiTypescript: <SiTypescript className="w-6 h-6 text-blue-500" />,
-  SiFlask: <SiFlask className="w-6 h-6 text-blue-500" />,
-  SiMysql: <SiMysql className="w-6 h-6 text-blue-500" />,
+  SiFlask : <SiFlask  className="w-6 h-6 text-blue-500" />,
+  SiMysql : <SiMysql  className="w-6 h-6 text-blue-500" />,
   IoLogoJavascript: <IoLogoJavascript className="w-6 h-6 text-yellow-300" />,
   FaPython: <FaPython className="w-6 h-6 text-yellow-300" />,
   SiExpress: <SiExpress className="w-6 h-6 text-gray-300" />,
@@ -65,7 +59,7 @@ const projects = [
     description:
       " Yayasan Babunnajah Almunawir merupakan lembaga pendidikan dasar dan menengah yang bernafaskan Islam dan bermutu di Provinsi Lampung.",
     image: "/project/babunnajah.png",
-    icon: ["FaReact", "RiTailwindCssFill", "FaNodeJs", "SiMongodb"],
+    icon: ["FaReact", "FaNodeJs", "RiTailwindCssFill", "SiMongodb"],
     link: "https://babunnajah.vercel.app/",
   },
   {
@@ -83,7 +77,7 @@ const projects = [
     description:
       "Aplikasi Android untuk menentukan Harga Sewa Bus Pariwisata Menggunakan Algoritma Decision Tree",
     image: "/project/bus.jpg",
-    icon: ["FaFlutter", "FaPython", "SiFlask", "SiMysql"],
+    icon: ["FaFlutter", "FaPython", "SiFlask" ,"SiMysql"],
     link: "https://github.com/SamudraWijayas/bus-rental-application.git",
   },
 ];
@@ -98,14 +92,14 @@ const Project = () => {
         </span>
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 sm:px-10 md:px-16 lg:px-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 px-20">
         {projects.map((projek) => (
           <div
             key={projek.id}
-            className="min-h-[28rem] sm:min-h-[25rem] flex items-center justify-center"
+            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center"
           >
             <PinContainer title={projek.title} href={projek.link}>
-              <div className="relative flex items-center justify-center w-full max-w-md h-[25vh] sm:h-[30vh] md:h-[28vh] lg:h-[30vh] mb-8 rounded-3xl overflow-hidden bg-[#13162d]">
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] h-[20vh] lg:h-[30vh] mb-10 rounded-3xl overflow-hidden bg-[#13162d]">
                 <Image
                   src={projek.image || "/samm4.png"}
                   alt={projek.title}
@@ -115,19 +109,19 @@ const Project = () => {
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl sm:text-lg text-base line-clamp-1">
+              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {projek.title}
               </h1>
-              <p className="lg:text-xl lg:font-normal md:font-normal sm:font-light font-light text-sm line-clamp-2">
+              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
                 {projek.description}
               </p>
-              <div className="flex items-center justify-start mt-5 mb-3 space-x-2 sm:space-x-3">
+              <div className="flex items-center justify-start mt-7 mb-3 space-x-3">
                 {projek.icon.map((iconKey, index) =>
                   iconComponents[iconKey] ? (
                     <div
                       key={iconKey}
-                      className="border border-white/[0.2] rounded-3xl bg-black lg:w-10 lg:h-10 md:w-9 md:h-9 sm:w-8 sm:h-8 w-7 h-7 flex justify-center items-center"
-                      style={{ transform: `translateX(-${3 * index * 3}px)` }}
+                      className="border border-white/[0.2] rounded-3xl bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      style={{ transform: `translateX(-${5 * index * 4}px)` }}
                     >
                       {iconComponents[iconKey]}
                     </div>
