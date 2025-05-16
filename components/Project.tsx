@@ -98,14 +98,14 @@ const Project = () => {
         </span>
       </h1>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 sm:px-10 md:px-16 lg:px-20">
         {projects.map((projek) => (
           <div
             key={projek.id}
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center"
+            className="min-h-[28rem] sm:min-h-[25rem] flex items-center justify-center"
           >
             <PinContainer title={projek.title} href={projek.link}>
-              <div className="relative ">
+              <div className="relative flex items-center justify-center w-full max-w-md h-[25vh] sm:h-[30vh] md:h-[28vh] lg:h-[30vh] mb-8 rounded-3xl overflow-hidden bg-[#13162d]">
                 <Image
                   src={projek.image || "/samm4.png"}
                   alt={projek.title}
@@ -115,19 +115,19 @@ const Project = () => {
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              <h1 className="font-bold lg:text-2xl md:text-xl sm:text-lg text-base line-clamp-1">
                 {projek.title}
               </h1>
-              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
+              <p className="lg:text-xl lg:font-normal md:font-normal sm:font-light font-light text-sm line-clamp-2">
                 {projek.description}
               </p>
-              <div className="flex items-center justify-start mt-7 mb-3 space-x-3">
+              <div className="flex items-center justify-start mt-5 mb-3 space-x-2 sm:space-x-3">
                 {projek.icon.map((iconKey, index) =>
                   iconComponents[iconKey] ? (
                     <div
                       key={iconKey}
-                      className="border border-white/[0.2] rounded-3xl bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{ transform: `translateX(-${5 * index * 4}px)` }}
+                      className="border border-white/[0.2] rounded-3xl bg-black lg:w-10 lg:h-10 md:w-9 md:h-9 sm:w-8 sm:h-8 w-7 h-7 flex justify-center items-center"
+                      style={{ transform: `translateX(-${3 * index * 3}px)` }}
                     >
                       {iconComponents[iconKey]}
                     </div>
