@@ -1,17 +1,61 @@
-import "animate.css";
+"use client";
+
+import { motion } from "motion/react";
+import Typewriter from "typewriter-effect";
+import { useState } from "react";
 import { BackgroundBeams } from "../components/ui/background-beams";
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 },
+};
+
 const Hero = () => {
+  const [typingDone, setTypingDone] = useState(false);
+
   return (
     <div className="pb-20 pt-24 sm:pt-32 bg-neutral-950 min-h-screen w-full relative flex flex-col items-center justify-center antialiased">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="relative z-10 text-3xl sm:text-4xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold leading-tight">
-          Samodra Wijaya Samdoria
-        </h1>
-        <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm sm:text-base text-center relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="relative z-10 text-3xl sm:text-4xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 font-sans font-bold leading-tight"
+        >
+          <Typewriter
+            options={{
+              autoStart: true,
+              loop: false,
+              delay: 75,
+              cursor: "|",
+            }}
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Samodra Wijaya Samdoria")
+                .callFunction(() => setTypingDone(true))
+                .start();
+            }}
+          />
+        </motion.h1>
+
+        {/* Ini selalu dirender, tapi animasi berdasarkan typingDone */}
+        <motion.p
+          variants={fadeInUp}
+          initial="hidden"
+          animate={typingDone ? "show" : "hidden"}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="text-neutral-400 max-w-lg mx-auto mt-4 text-xl sm:text-2xl md:text-3xl font-medium z-10"
+        >
           Front End Developer
-        </p>
-        <div className="relative z-10 mt-6 flex justify-center">
+        </motion.p>
+
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          animate={typingDone ? "show" : "hidden"}
+          transition={{ delay: 0.6, duration: 0.5 }}
+          className="relative z-10 mt-6 flex justify-center"
+        >
           <a
             href="https://drive.google.com/file/d/1k97noZZnf4ZJP5y9uy1GE28Jubml_i1e/view?usp=sharing"
             download
@@ -19,7 +63,7 @@ const Hero = () => {
           >
             Download CV
           </a>
-        </div>
+        </motion.div>
       </div>
       <BackgroundBeams />
     </div>
