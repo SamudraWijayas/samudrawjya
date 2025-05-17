@@ -7,7 +7,15 @@ import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import { BsBootstrap } from "react-icons/bs";
 import { FaFlutter } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiExpress, SiTypescript, SiMongodb, SiFlask , SiMysql, SiRadixui,SiAntdesign} from "react-icons/si";
+import {
+  SiExpress,
+  SiTypescript,
+  SiMongodb,
+  SiFlask,
+  SiMysql,
+  SiRadixui,
+  SiAntdesign,
+} from "react-icons/si";
 
 // Mapping icon string ke komponen React
 const iconComponents: { [key: string]: JSX.Element } = {
@@ -19,9 +27,9 @@ const iconComponents: { [key: string]: JSX.Element } = {
   BsBootstrap: <BsBootstrap className="w-6 h-6 text-purple-600" />,
   FaFlutter: <FaFlutter className="w-6 h-6 text-blue-500" />,
   SiTypescript: <SiTypescript className="w-6 h-6 text-blue-500" />,
-  SiFlask : <SiFlask  className="w-6 h-6 text-blue-500" />,
-  SiMysql : <SiMysql  className="w-6 h-6 text-blue-500" />,
-  SiAntdesign : <SiAntdesign  className="w-6 h-6 text-blue-700" />,
+  SiFlask: <SiFlask className="w-6 h-6 text-blue-500" />,
+  SiMysql: <SiMysql className="w-6 h-6 text-blue-500" />,
+  SiAntdesign: <SiAntdesign className="w-6 h-6 text-blue-700" />,
   IoLogoJavascript: <IoLogoJavascript className="w-6 h-6 text-yellow-300" />,
   FaPython: <FaPython className="w-6 h-6 text-yellow-300" />,
   SiExpress: <SiExpress className="w-6 h-6 text-gray-300" />,
@@ -35,7 +43,7 @@ const projects = [
     description:
       "Sebuah website yang menghadirkan berbagai resep makanan tradisional dari berbagai daerah",
     image: "/project/foodieFrame.png",
-    icon: ["FaReact","SiAntdesign", "FaNodeJs", "SiExpress"],
+    icon: ["FaReact", "SiAntdesign", "FaNodeJs", "SiExpress"],
     link: "https://foodieframe.vercel.app/",
   },
   {
@@ -44,13 +52,20 @@ const projects = [
     description:
       " joki pembuatan website untuk berbagai kebutuhan, mulai dari bisnis, portofolio, hingga sistem berbasis web",
     image: "/project/jokiNdes.png",
-    icon: ["RiNextjsLine", "RiTailwindCssFill","SiRadixui", "SiTypescript", "SiMongodb"],
+    icon: [
+      "RiNextjsLine",
+      "RiTailwindCssFill",
+      "SiRadixui",
+      "SiTypescript",
+      "SiMongodb",
+    ],
     link: "https://www.jokindess.com/",
   },
   {
     id: 3,
     title: "PRC Rental Mobil",
-    description: " PRC Sewa Mobil Lampung",
+    description:
+      "Sewa Mobil yang menggabungkan kenyamanan, keandalan, dan kemewahan dalam setiap perjalanan",
     image: "/project/prc.png",
     icon: ["IoLogoJavascript", "BsBootstrap"],
     link: "https://prcsewamobillampung.vercel.app/",
@@ -79,7 +94,7 @@ const projects = [
     description:
       "Aplikasi Android untuk menentukan Harga Sewa Bus Pariwisata Menggunakan Algoritma Decision Tree",
     image: "/project/bus.jpg",
-    icon: ["FaFlutter", "FaPython", "SiFlask" ,"SiMysql"],
+    icon: ["FaFlutter", "FaPython", "SiFlask", "SiMysql"],
     link: "https://github.com/SamudraWijayas/bus-rental-application.git",
   },
 ];
@@ -114,7 +129,7 @@ const Project = () => {
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {projek.title}
               </h1>
-              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
+              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-3">
                 {projek.description}
               </p>
               <div className="flex items-center justify-start mt-7 mb-3 space-x-3">
