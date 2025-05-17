@@ -101,7 +101,7 @@ const projects = [
 
 const Project = () => {
   return (
-    <div className="py-20 text-white" id="project">
+    <div className="py-20 text-white bg-white" id="project">
       <h1 className="heading text-4xl font-bold text-center text-white">
         A small selection of
         <span className="block text-emerald-400 text-2xl font-semibold">
