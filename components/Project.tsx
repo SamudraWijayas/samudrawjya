@@ -97,6 +97,15 @@ const projects = [
     icon: ["FaFlutter", "FaPython", "SiFlask", "SiMysql"],
     link: "https://github.com/SamudraWijayas/bus-rental-application.git",
   },
+  {
+    id: 7,
+    title: "Manajemen Database",
+    description:
+      "Sistem Informasi Manajemen untuk pembinaan dari kecil hingga dewasa",
+    image: "/project/manajemen.png",
+    icon: ["FaReact", "RiTailwindCssFill", "FaNodeJs","SiExpress", "SiMysql"],
+    link: "https://github.com/SamudraWijayas/bus-rental-application.git",
+  },
 ];
 
 const Project = () => {
