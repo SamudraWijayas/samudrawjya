@@ -1,18 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import ParticlesBackground from "./ui/ParticlesBackground";
-import { FaReact, FaNodeJs, FaBootstrap } from "react-icons/fa";
-import {
-  SiPhp,
-  SiLaravel,
-  SiExpress,
-  SiMysql,
-  SiMongodb,
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
-  SiNextdotjs,
-} from "react-icons/si";
 
 console.log("ParticlesBackground component is rendering!");
 
@@ -51,56 +39,6 @@ const About = () => {
             experience in building responsive, interactive, and user-friendly
             interfaces through various projects.
           </p>
-          <div className="mt-6 flex flex-wrap justify-center md:justify-start space-x-6 space-y-4 text-white text-3xl">
-            <div className="flex flex-col items-center">
-              <FaReact className="text-blue-500" />
-              <span className="text-sm mt-1 font-semibold">React</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <FaNodeJs className="text-green-500" />
-              <span className="text-sm mt-1 font-semibold">Node.js</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <FaBootstrap className="text-purple-600" />
-              <span className="text-sm mt-1 font-semibold">Bootstrap</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiPhp className="text-indigo-600" />
-              <span className="text-sm mt-1 font-semibold">PHP</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiLaravel className="text-red-600" />
-              <span className="text-sm mt-1 font-semibold">Laravel</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiExpress className="text-gray-700" />
-              <span className="text-sm mt-1 font-semibold">Express.js</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiMysql className="text-blue-700" />
-              <span className="text-sm mt-1 font-semibold">MySQL</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiMongodb className="text-green-700" />
-              <span className="text-sm mt-1 font-semibold">MongoDB</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiJavascript className="text-yellow-400" />
-              <span className="text-sm mt-1 font-semibold">JavaScript</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiHtml5 className="text-orange-600" />
-              <span className="text-sm mt-1 font-semibold">HTML5</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiCss3 className="text-blue-600" />
-              <span className="text-sm mt-1 font-semibold">CSS3</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiNextdotjs className="text-white" />
-              <span className="text-sm mt-1 font-semibold">Next.js</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
