@@ -5,7 +5,7 @@ import Image from "next/image";
 import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
 import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import { BsBootstrap } from "react-icons/bs";
-import { FaFlutter } from "react-icons/fa6";
+import { FaFlutter, FaPhp, FaLaravel } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
 import {
   SiExpress,
@@ -30,6 +30,8 @@ const iconComponents: { [key: string]: JSX.Element } = {
   SiFlask: <SiFlask className="w-6 h-6 text-blue-500" />,
   SiMysql: <SiMysql className="w-6 h-6 text-blue-500" />,
   SiAntdesign: <SiAntdesign className="w-6 h-6 text-blue-700" />,
+  FaPhp: <FaPhp className="w-6 h-6 text-blue-700" />,
+  FaLaravel: <FaLaravel className="w-6 h-6 text-red-500" />,
   IoLogoJavascript: <IoLogoJavascript className="w-6 h-6 text-yellow-300" />,
   FaPython: <FaPython className="w-6 h-6 text-yellow-300" />,
   SiExpress: <SiExpress className="w-6 h-6 text-gray-300" />,
@@ -104,6 +106,15 @@ const projects = [
       "Sistem Informasi Manajemen untuk pembinaan dari kecil hingga dewasa",
     image: "/project/manajemen.png",
     icon: ["FaReact", "RiTailwindCssFill", "FaNodeJs","SiExpress", "SiMysql"],
+    link: "https://github.com/SamudraWijayas/bus-rental-application.git",
+  },
+  {
+    id: 8,
+    title: "Absensi Kegiatan",
+    description:
+      "Sistem Absensi Kegiatan Sederhana",
+    image: "/project/image.png",
+    icon: ["FaPhp","FaLaravel", "RiTailwindCssFill", "SiMysql"],
     link: "https://github.com/SamudraWijayas/bus-rental-application.git",
   },
 ];
