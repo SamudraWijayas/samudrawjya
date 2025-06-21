@@ -28,10 +28,11 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
 
   const options: ISourceOptions = useMemo(
     () => ({
-      background: {
-        color: { value: "transparent" },
-      },
+      // background: {
+      //   color: { value: "transparent" },
+      // },
       fpsLimit: 120,
+      fullScreen: { enable: true, zIndex: 0 },
       interactivity: {
         events: {
           onClick: { enable: true, mode: "repulse" },
