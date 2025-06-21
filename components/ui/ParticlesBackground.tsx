@@ -72,7 +72,7 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
   return init ? (
     <div className="absolute inset-0 z-0 w-full h-full">
       {/* Gradient Background Layer */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#070417] via-[#190c34] to-[#070417] -z-1" />
+      <div className="relative min-h-screen w-full bg-gradient-to-r from-[#070417] via-[#190c34] to-[#070417] -z-1" />
 
       {/* Particles Layer */}
       <Particles

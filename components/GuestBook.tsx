@@ -21,7 +21,7 @@ export default function GuestBookPage() {
           <p className="text-gray-300 text-sm mb-4">
             Tinggalkan pesan atau komentar menggunakan akun GitHub kamu! 👋
           </p>
-          <div className="bg-white/5 p-6 order border-white/10 transition rounded-xl">
+          <div className="p-0 bg-transparent border-none sm:p-6 sm:bg-white/5 sm:border sm:border-white/10 transition rounded-xl">
             <GiscusComments />
           </div>
         </div>
