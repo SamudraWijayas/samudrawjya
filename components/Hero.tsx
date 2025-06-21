@@ -14,7 +14,7 @@ const Hero = () => {
   const [typingDone, setTypingDone] = useState(false);
 
   return (
-    <div className="pb-20 pt-24 sm:pt-32 bg-neutral-950 min-h-screen w-full relative flex flex-col items-center justify-center antialiased">
+    <div className="pb-20 pt-24 sm:pt-32 bg-gradient-to-r from-[#070417] via-[#190c34] to-[#070417] min-h-screen w-full relative flex flex-col items-center justify-center antialiased z-1">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.h1
           initial={{ opacity: 0 }}
@@ -39,15 +39,27 @@ const Hero = () => {
         </motion.h1>
 
         {/* Ini selalu dirender, tapi animasi berdasarkan typingDone */}
-        <motion.p
+        <motion.div
           variants={fadeInUp}
           initial="hidden"
           animate={typingDone ? "show" : "hidden"}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="text-neutral-400 max-w-lg mx-auto mt-4 text-xl sm:text-2xl md:text-3xl font-medium z-10"
+          className="text-neutral-400 max-w-lg mx-auto mt-4 text-xl sm:text-2xl md:text-3xl font-medium z-10 h-10"
         >
-          Front End Developer
-        </motion.p>
+          <Typewriter
+            options={{
+              strings: [
+                "Front End Developer",
+                "Back End Developer",
+                "Fullstack Developer",
+              ],
+              autoStart: true,
+              loop: true,
+              delay: 60,
+              deleteSpeed: 40,
+            }}
+          />
+        </motion.div>
 
         <motion.div
           variants={fadeInUp}

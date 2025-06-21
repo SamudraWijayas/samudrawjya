@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} antialiased bg-gradient-to-r from-[#070417] via-[#190c34] to-[#070417]`} >{children}</body>
     </html>
   );
 }

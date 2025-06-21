@@ -20,14 +20,16 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
     });
   }, []);
 
-  const particlesLoaded = async (container: Container | undefined): Promise<void> => {
+  const particlesLoaded = async (
+    container: Container | undefined
+  ): Promise<void> => {
     console.log("Particles loaded:", container);
   };
 
   const options: ISourceOptions = useMemo(
     () => ({
       background: {
-        color: { value: "#0a0a0a" },
+        color: { value: "transparent" },
       },
       fpsLimit: 120,
       interactivity: {
@@ -68,8 +70,17 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
   );
 
   return init ? (
-    <div className="w-20 h-screen absolute top-0 left-0 -z-10">
-      <Particles id={id} particlesLoaded={particlesLoaded} options={options} />
+    <div className="absolute inset-0 z-0 w-full h-full">
+      {/* Gradient Background Layer */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#070417] via-[#190c34] to-[#070417] -z-1" />
+
+      {/* Particles Layer */}
+      <Particles
+        id={id}
+        className="absolute inset-0 z-10"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
     </div>
   ) : null;
 };

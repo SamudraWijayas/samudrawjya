@@ -1,9 +1,54 @@
 @import "tailwindcss";
 
+.shine-gradient {
+  background-color: rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-gradient:hover {
+  background: linear-gradient(
+    to right,
+    #2564eb29,
+    #9233ea27
+  );
+  background-size: 200% 100%;
+  background-position: left center;
+}
+
+.shine-line {
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.059),
+    transparent
+  );
+
+  pointer-events: none;
+  z-index: 5;
+}
+
+.shine-gradient:hover .shine-line {
+  animation: shine-move 0.9s ease forwards;
+}
+
+@keyframes shine-move {
+  0% {
+    left: -85%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
-
 
 html {
   scroll-behavior: smooth;
@@ -124,5 +169,36 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.glass-hover-effect::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.glass-hover-effect:hover::before {
+  transform: translateX(100%);
+}
+@layer utilities {
+  @keyframes shine {
+    0% {
+      left: -75%;
+    }
+    100% {
+      left: 125%;
+    }
+  }
+
+  .animate-shine {
+    animation: shine 1s ease-in-out forwards;
   }
 }

@@ -18,6 +18,7 @@ import {
   SiMongodb,
   SiTailwindcss,
   SiExpress,
+  SiLeaflet,
 } from "react-icons/si";
 import { FaCode, FaServer } from "react-icons/fa6";
 
@@ -34,6 +35,7 @@ const skills = {
     { icon: <FaReact className="text-blue-400" />, name: "React.js" },
     { icon: <SiNextdotjs className="text-gray-500" />, name: "Next.js" },
     { icon: <FaBootstrap className="text-indigo-500" />, name: "Bootstrap" },
+    { icon: <SiLeaflet className="text-green-500" />, name: "Leaflet.js" },
     {
       icon: <SiTailwindcss className="text-teal-400" />,
       name: "Tailwind CSS",
@@ -68,9 +70,12 @@ const skills = {
 
 const Skills = () => {
   return (
-    <section className="py-16 px-6" id="skills">
+    <section
+      className="py-16 px-6 bg-gradient-to-r from-[#070417] via-[#190c34] to-[#070417] -z-10"
+      id="skills"
+    >
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-white">
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent z-50">
           Skill & Expertise
         </h2>
         <p className="text-gray-400">
@@ -81,7 +86,7 @@ const Skills = () => {
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Frontend */}
-        <div className="bg-black rounded-lg shadow p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+        <div className="bg-[#10172a]/50 border border-white/10 backdrop-blur rounded-lg p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
           <h3 className="text-xl font-semibold mb-4 text-white flex items-center">
             <FaCode className="mr-3 text-blue-600" /> Front-End Development
           </h3>
@@ -96,10 +101,11 @@ const Skills = () => {
               </div>
             ))}
           </div>
+
         </div>
 
         {/* Backend */}
-        <div className="bg-black rounded-lg shadow p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+        <div className="bg-[#10172a]/50 border border-white/10 backdrop-blur rounded-lg p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
           <h3 className="text-xl font-semibold mb-4 text-white flex items-center">
             <FaServer className="mr-3 text-blue-600" /> Back-End Development
           </h3>
@@ -117,7 +123,7 @@ const Skills = () => {
         </div>
 
         {/* Other Skills */}
-        <div className="md:col-span-2 bg-black rounded-lg shadow p-6">
+        <div className="md:col-span-2 bg-[#10172a]/50 border border-white/10 backdrop-blur rounded-lg shadow p-6 transform transition-transform duration-300 hover:scale-105">
           <h3 className="text-xl font-semibold mb-4 text-white">
             🧠 Other Skills
           </h3>
