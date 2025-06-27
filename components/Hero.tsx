@@ -69,7 +69,7 @@ const Hero = () => {
           className="relative z-10 mt-6 flex justify-center"
         >
           <a
-            href="https://drive.google.com/file/d/1k97noZZnf4ZJP5y9uy1GE28Jubml_i1e/view?usp=sharing"
+            href="https://drive.google.com/file/d/18TDYUg8Wl7QQ_xY2Q3pbNPDJxr35uUff/view?usp=sharing"
             download
             className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition text-sm sm:text-base"
           >
