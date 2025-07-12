@@ -53,7 +53,7 @@ export default function GuestBookPage() {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/6285219251800"
+              href="https://wa.me/6281931724964"
               target="_blank"
               rel="noopener noreferrer"
               className="relative overflow-hidden duration-300 group flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-gradient-to-r hover:from-green-600/20 hover:to-blue-600/20 border border-white/10 transition"
