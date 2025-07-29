@@ -80,9 +80,9 @@ const projects = [
     title: "Yayasan Babunnajah",
     description:
       "Lembaga pendidikan dasar dan menengah Islam bermutu di Lampung.",
-    image: "/project/babunnajah.png",
-    icon: ["FaReact", "FaNodeJs", "RiTailwindCssFill", "SiMongodb"],
-    link: "https://babunnajah.vercel.app/",
+    image: "/project/yba.png",
+    icon: ["FaPhp", "FaLaravel", "RiTailwindCssFill", "SiMysql"],
+    link: "https://babunnajah.jokindess.com/",
   },
   {
     id: 5,
