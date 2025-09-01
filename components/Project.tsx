@@ -82,7 +82,7 @@ const projects = [
       "Lembaga pendidikan dasar dan menengah Islam bermutu di Lampung.",
     image: "/project/yba.png",
     icon: ["FaPhp", "FaLaravel", "RiTailwindCssFill", "SiMysql"],
-    link: "https://babunnajah.jokindess.com/",
+    link: "https://ybalampung.org/",
   },
   {
     id: 5,
