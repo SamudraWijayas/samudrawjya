@@ -196,7 +196,7 @@ const Project = () => {
                   iconComponents[iconKey] ? (
                     <div
                       key={iconKey}
-                      className="border border-white/[0.2] rounded-3xl bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="border border-white/[0.2] rounded-3xl bg-[#10172a]/60 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                       style={{ transform: `translateX(-${5 * index * 4}px)` }}
                     >
                       {iconComponents[iconKey]}
