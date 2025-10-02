@@ -16,6 +16,7 @@ import {
   SiRadixui,
   SiAntdesign,
   SiLeaflet,
+  SiNextui,
 } from "react-icons/si";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -40,18 +41,28 @@ const iconComponents: { [key: string]: JSX.Element } = {
   FaPython: <FaPython className="w-6 h-6 text-yellow-300" />,
   SiExpress: <SiExpress className="w-6 h-6 text-gray-300" />,
   SiRadixui: <SiRadixui className="w-6 h-6 text-gray-300" />,
+  SiNextui: <SiNextui className="w-6 h-6 text-gray-500" />,
 };
 
 // Data project
 const projects = [
   {
     id: 1,
-    title: "Foofie Frame",
-    description: "Website resep makanan tradisional dari berbagai daerah.",
-    image: "/project/foodieFrame.png",
-    icon: ["FaReact", "SiAntdesign", "FaNodeJs", "SiExpress"],
-    link: "https://foodieframe.vercel.app/",
+    title: "Tiket Online",
+    description:
+      "Platform penjualan tiket online dengan integrasi payment gateway",
+    image: "/project/tiket.png",
+    icon: [
+      "RiNextjsLine",
+      "RiTailwindCssFill",
+      "SiNextui",
+      "FaNodeJs",
+      "SiMongodb",
+      "SiExpress",
+    ],
+    link: "https://tiket.jokindess.com",
   },
+
   {
     id: 2,
     title: "Joki Ndess",
@@ -86,12 +97,13 @@ const projects = [
   },
   {
     id: 5,
-    title: "Aplikasi Absensi QR Code",
-    description: "Aplikasi Android absensi dengan QR Code (Flutter).",
-    image: "/project/absen.png",
-    icon: ["FaFlutter", "FaNodeJs", "SiExpress"],
-    link: "",
+    title: "Foofie Frame",
+    description: "Website resep makanan tradisional dari berbagai daerah.",
+    image: "/project/foodieFrame.png",
+    icon: ["FaReact", "SiAntdesign", "FaNodeJs", "SiExpress"],
+    link: "https://foodieframe.vercel.app/",
   },
+
   {
     id: 6,
     title: "Aplikasi Sewa Bus",
@@ -139,6 +151,14 @@ const projects = [
     image: "/project/kemacetan.png",
     icon: ["FaPython", "SiFlask", "RiTailwindCssFill", "SiLeaflet"],
     link: "https://github.com/SamudraWijayas/sistem-prediksi-kemacetan.git",
+  },
+  {
+    id: 11,
+    title: "Aplikasi Absensi QR Code",
+    description: "Aplikasi Android absensi dengan QR Code (Flutter).",
+    image: "/project/absen.png",
+    icon: ["FaFlutter", "FaNodeJs", "SiExpress"],
+    link: "",
   },
 ];
 

@@ -119,13 +119,37 @@ export default function Hero() {
           animate="show"
           variants={fadeInUp}
           transition={{ delay: 0.9, duration: 0.5 }}
-          className="mt-6 flex justify-center"
+          className="mt-6 flex justify-center gap-4"
         >
           <a
             href="https://drive.google.com/file/d/18TDYUg8Wl7QQ_xY2Q3pbNPDJxr35uUff/view?usp=sharing"
             className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-md transition text-sm sm:text-base"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Download CV
+          </a>
+
+          <a
+            href="https://github.com/username" // ganti sama username GitHub lo
+            className="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-md transition text-sm sm:text-base flex items-center gap-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {/* pakai icon github biar keren */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12 .297a12 12 0 0 0-3.797 23.406c.6.111.82-.261.82-.577v-2.173c-3.338.726-4.042-1.611-4.042-1.611-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.419-1.304.762-1.604-2.665-.303-5.466-1.334-5.466-5.933 0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.49 11.49 0 0 1 6 0c2.291-1.552 3.298-1.23 3.298-1.23.654 1.652.242 2.873.118 3.176.768.84 1.235 1.91 1.235 3.221 0 4.61-2.803 5.628-5.475 5.924.43.372.823 1.102.823 2.222v3.293c0 .319.218.694.825.576A12 12 0 0 0 12 .297Z"
+                clipRule="evenodd"
+              />
+            </svg>
+            GitHub
           </a>
         </motion.div>
       </div>
