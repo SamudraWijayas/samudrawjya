@@ -32,7 +32,7 @@ export default function BottomNavigation() {
 
   return (
     <nav
-      className={`fixed bottom-0 left-0 w-full text-white shadow-md p-2 transition-colors duration-300 z-50
+      className={`fixed bottom-0 left-0 w-full text-white shadow-md p-2 transition-colors duration-300 z-100
       ${bgClass} md:static md:top-0 md:w-full md:h-auto md:flex md:justify-center`}
     >
       <ul className="flex flex-wrap justify-around md:justify-center md:gap-8">

@@ -20,6 +20,7 @@ import {
 } from "react-icons/si";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ParticlesBackground from "./ui/ParticlesBackground";
 
 // Icon mapping
 const iconComponents: { [key: string]: JSX.Element } = {
@@ -178,10 +179,13 @@ const Project = () => {
       className="py-20 text-white bg-gradient-to-r from-[#070417] via-[#190c34] to-[#070417]"
       id="project"
     >
-      <h2 className="heading text-4xl font-bold text-center bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent z-50">
-        A small selection of
-        <span className="block text-gray-400 text-2xl font-semibold">
-          recent project
+      <ParticlesBackground id="tsparticles" />
+
+      <h2 className="m-2 px-4 heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent z-50 leading-tight">
+        My experience
+        <span className="block mt-2 text-gray-400 text-sm sm:text-base md:text-xl font-semibold max-w-3xl mx-auto leading-relaxed">
+          Navigating diverse environments with adaptability and expertise for
+          holistic solutions.
         </span>
       </h2>
 
