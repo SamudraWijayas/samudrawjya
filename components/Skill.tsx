@@ -14,7 +14,7 @@ import {
   SiMongodb,
   SiMysql,
 } from "react-icons/si";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const stacks = [
@@ -44,7 +44,6 @@ const stacks = [
     title: "Redux Toolkit",
     desc: "Manage global state",
   },
-
   {
     icon: <SiJavascript className="text-yellow-400 text-3xl" />,
     title: "JavaScript",
@@ -98,8 +97,14 @@ export default function Skills() {
   return (
     <section className="py-20 text-white" id="skills">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Heading */}
-        <div className="text-start mb-12">
+        {/* === Heading === */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-start mb-12"
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-3 flex items-center gap-2">
             <span className="bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent">
               🧩 My Stacks
@@ -109,33 +114,68 @@ export default function Skills() {
             Commitment to staying updated with the latest design trends and
             techniques.
           </p>
-          <div className="mt-6 border-b border-neutral-800 w-full"></div>
-        </div>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8 }}
+            className="mt-6 border-b border-neutral-800 w-full origin-left"
+          ></motion.div>
+        </motion.div>
 
-        {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4">
+        {/* === Animated Grid === */}
+        <motion.div
+          className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.08,
+              },
+            },
+          }}
+        >
           {stacks.map((stack, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.05, duration: 0.3 }}
-              className="flex items-center justify-between bg-[#10172a]/60 border border-white/10 relative overflow-hidden duration-300 group hover:bg-gradient-to-r hover:from-blue-600/20 hover:to-purple-600/20 transition-all rounded-xl p-4"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              whileHover={{
+                scale: 1.03,
+                background:
+                  "linear-gradient(90deg, rgba(59,130,246,0.1) 0%, rgba(147,51,234,0.1) 100%)",
+              }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center justify-between bg-[#10172a]/60 border border-white/10 relative overflow-hidden rounded-xl p-4 cursor-pointer group"
             >
               <div className="flex items-center gap-4">
-                <div className="p-2 bg-neutral-800 rounded-lg">
+                <motion.div
+                  whileHover={{ rotate: 10, scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="p-2 bg-neutral-800 rounded-lg"
+                >
                   {stack.icon}
-                </div>
+                </motion.div>
                 <div>
                   <h3 className="font-semibold text-base">{stack.title}</h3>
                   <p className="text-sm text-gray-400">{stack.desc}</p>
                 </div>
               </div>
-              <ArrowRight className="text-gray-500 w-5 h-5" />
-              <span className="absolute inset-0 -left-10 bg-white opacity-6 blur-md transform -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+              <motion.div
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <ArrowRight className="text-gray-500 w-5 h-5 group-hover:text-blue-400 transition" />
+              </motion.div>
+              {/* Light sweep effect */}
+              <span className="absolute inset-0 -left-10 bg-gradient-to-r from-white/10 to-transparent opacity-0 blur-md transform -translate-x-full group-hover:translate-x-full group-hover:opacity-40 transition-all duration-700"></span>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
