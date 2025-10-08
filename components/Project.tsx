@@ -187,7 +187,7 @@ const Project = () => {
           Navigating diverse environments with adaptability and expertise for
           holistic solutions.
         </span>
-      </h2>
+      </h2> 
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 px-20 mt-10">
         {visibleProjects.map((projek, index) => (

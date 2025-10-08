@@ -124,7 +124,7 @@ export default function Skills() {
 
         {/* === Animated Grid === */}
         <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4"
+          className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 z-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -150,7 +150,7 @@ export default function Skills() {
                   "linear-gradient(90deg, rgba(59,130,246,0.1) 0%, rgba(147,51,234,0.1) 100%)",
               }}
               transition={{ duration: 0.3 }}
-              className="flex items-center justify-between bg-[#10172a]/60 border border-white/10 relative overflow-hidden rounded-xl p-4 cursor-pointer group"
+              className="flex items-center justify-between bg-[#10172a]/60 border border-white/10 relative overflow-hidden rounded-xl p-4 cursor-pointer group z-10"
             >
               <div className="flex items-center gap-4">
                 <motion.div
