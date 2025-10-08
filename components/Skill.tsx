@@ -95,7 +95,7 @@ const stacks = [
 
 export default function Skills() {
   return (
-    <section className="py-20 text-white" id="skills">
+    <section className="py-20 text-white z-20" id="skills">
       <div className="max-w-6xl mx-auto px-6">
         {/* === Heading === */}
         <motion.div
