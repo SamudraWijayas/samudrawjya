@@ -48,7 +48,33 @@ const iconComponents: { [key: string]: JSX.Element } = {
 // Data project
 const projects = [
   {
-    id: 1,
+    title: "Mainco",
+    description: "Main Robotic Construction Corporation",
+    image: "/project/mainco.png",
+    icon: [
+      "RiNextjsLine",
+      "RiTailwindCssFill",
+      "FaNodeJs",
+      "SiMongodb",
+      "SiExpress",
+    ],
+    link: "https://mainco.io",
+  },
+  {
+    title: "Iuris Law",
+    description:
+      "platform konsultasi hukum online yang menghubungkan klien dengan pengacara secara cepat, mudah, dan aman.",
+    image: "/project/iuris.png",
+    icon: [
+      "RiNextjsLine",
+      "RiTailwindCssFill",
+      "FaNodeJs",
+      "SiMongodb",
+      "SiExpress",
+    ],
+    link: "https://iurislaw.xyz",
+  },
+  {
     title: "Tiket Online",
     description:
       "Platform penjualan tiket online dengan integrasi payment gateway",
@@ -65,7 +91,6 @@ const projects = [
   },
 
   {
-    id: 2,
     title: "Joki Ndess",
     description:
       "Jasa pembuatan website untuk bisnis, portofolio, hingga sistem web.",
@@ -80,7 +105,6 @@ const projects = [
     link: "https://www.jokindess.com/",
   },
   {
-    id: 3,
     title: "PRC Rental Mobil",
     description: "Sewa Mobil dengan kenyamanan, keandalan, dan kemewahan.",
     image: "/project/prc.png",
@@ -88,7 +112,6 @@ const projects = [
     link: "https://prcsewamobillampung.vercel.app/",
   },
   {
-    id: 4,
     title: "Yayasan Babunnajah",
     description:
       "Lembaga pendidikan dasar dan menengah Islam bermutu di Lampung.",
@@ -97,7 +120,6 @@ const projects = [
     link: "https://ybalampung.org/",
   },
   {
-    id: 5,
     title: "Foofie Frame",
     description: "Website resep makanan tradisional dari berbagai daerah.",
     image: "/project/foodieFrame.png",
@@ -106,7 +128,6 @@ const projects = [
   },
 
   {
-    id: 6,
     title: "Aplikasi Sewa Bus",
     description:
       "Aplikasi Android menentukan harga sewa bus dengan Decision Tree.",
@@ -115,7 +136,6 @@ const projects = [
     link: "https://github.com/SamudraWijayas/bus-rental-application.git",
   },
   {
-    id: 7,
     title: "Manajemen Database",
     description: "Sistem Manajemen pembinaan dari kecil hingga dewasa.",
     image: "/project/manajemen.png",
@@ -123,7 +143,6 @@ const projects = [
     link: "",
   },
   {
-    id: 8,
     title: "Absensi Kegiatan",
     description: "Sistem absensi kegiatan berbasis web Laravel.",
     image: "/project/absen2.png",
@@ -131,7 +150,6 @@ const projects = [
     link: "",
   },
   {
-    id: 9,
     title: "Sistem Layanan Gas",
     description: "Sistem GIS Gas Subsidi dengan A* (A-Star) di Leaflet.",
     image: "/project/gas.png",
@@ -146,7 +164,6 @@ const projects = [
     link: "https://github.com/SamudraWijayas/sistem-layanan-gas.git",
   },
   {
-    id: 10,
     title: "Sistem Prediksi Kemacetan",
     description: "Prediksi kemacetan dan waktu tempuh menggunakan LSTM.",
     image: "/project/kemacetan.png",
@@ -154,7 +171,6 @@ const projects = [
     link: "https://github.com/SamudraWijayas/sistem-prediksi-kemacetan.git",
   },
   {
-    id: 11,
     title: "Aplikasi Absensi QR Code",
     description: "Aplikasi Android absensi dengan QR Code (Flutter).",
     image: "/project/absen.png",
@@ -187,12 +203,12 @@ const Project = () => {
           Navigating diverse environments with adaptability and expertise for
           holistic solutions.
         </span>
-      </h2> 
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 px-20 mt-10">
         {visibleProjects.map((projek, index) => (
           <div
-            key={projek.id}
+            key={index}
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center"
             data-aos="fade-up"
             data-aos-delay={`${index * 100}`}
