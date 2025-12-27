@@ -54,6 +54,7 @@ const projects = [
     icon: [
       "RiNextjsLine",
       "RiTailwindCssFill",
+      "SiTypescript",
       "FaNodeJs",
       "SiMongodb",
       "SiExpress",
@@ -68,6 +69,7 @@ const projects = [
     icon: [
       "RiNextjsLine",
       "RiTailwindCssFill",
+      "SiTypescript",
       "FaNodeJs",
       "SiMongodb",
       "SiExpress",
@@ -82,6 +84,7 @@ const projects = [
     icon: [
       "RiNextjsLine",
       "RiTailwindCssFill",
+      "SiTypescript",
       "SiNextui",
       "FaNodeJs",
       "SiMongodb",
