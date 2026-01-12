@@ -49,7 +49,8 @@ const iconComponents: { [key: string]: JSX.Element } = {
 const projects = [
   {
     title: "Mainco",
-    description: "Main Robotic Construction Corporation",
+    description:
+      "Corporate website for a robotic construction company, showcasing services, technology solutions, and company profile with a modern and professional interface.",
     image: "/project/mainco.png",
     icon: [
       "RiNextjsLine",
@@ -64,7 +65,7 @@ const projects = [
   {
     title: "Iuris Law",
     description:
-      "platform konsultasi hukum online yang menghubungkan klien dengan pengacara secara cepat, mudah, dan aman.",
+      "An online legal consultation platform that connects clients with professional lawyers quickly, securely, and efficiently, featuring real-time consultation and case management.",
     image: "/project/iuris.png",
     icon: [
       "RiNextjsLine",
@@ -77,9 +78,9 @@ const projects = [
     link: "https://iurislaw.xyz",
   },
   {
-    title: "Tiket Online",
+    title: "Online Ticketing System",
     description:
-      "Platform penjualan tiket online dengan integrasi payment gateway",
+      "A web-based online ticket sales platform integrated with a payment gateway to handle transactions securely and automatically.",
     image: "/project/tiket.png",
     icon: [
       "RiNextjsLine",
@@ -92,11 +93,10 @@ const projects = [
     ],
     link: "https://tiket.jokindess.com",
   },
-
   {
     title: "Joki Ndess",
     description:
-      "Jasa pembuatan website untuk bisnis, portofolio, hingga sistem web.",
+      "A digital service platform providing website development solutions for businesses, portfolios, and custom web-based systems.",
     image: "/project/jokiNdes.png",
     icon: [
       "RiNextjsLine",
@@ -108,53 +108,57 @@ const projects = [
     link: "https://www.jokindess.com/",
   },
   {
-    title: "PRC Rental Mobil",
-    description: "Sewa Mobil dengan kenyamanan, keandalan, dan kemewahan.",
+    title: "PRC Car Rental",
+    description:
+      "A car rental service website offering comfortable, reliable, and premium vehicle rental options with a simple booking interface.",
     image: "/project/prc.png",
     icon: ["IoLogoJavascript", "BsBootstrap"],
     link: "https://prcsewamobillampung.vercel.app/",
   },
   {
-    title: "Yayasan Babunnajah",
+    title: "Babunnajah Foundation",
     description:
-      "Lembaga pendidikan dasar dan menengah Islam bermutu di Lampung.",
+      "An educational institution website for an Islamic primary and secondary school, providing academic information, news, and school profiles.",
     image: "/project/yba.png",
     icon: ["FaPhp", "FaLaravel", "RiTailwindCssFill", "SiMysql"],
     link: "https://ybalampung.org/",
   },
   {
-    title: "Foofie Frame",
-    description: "Website resep makanan tradisional dari berbagai daerah.",
+    title: "Foodie Frame",
+    description:
+      "A recipe website featuring traditional dishes from various regions, allowing users to explore, search, and view cooking instructions.",
     image: "/project/foodieFrame.png",
     icon: ["FaReact", "SiAntdesign", "FaNodeJs", "SiExpress"],
     link: "https://foodieframe.vercel.app/",
   },
-
   {
-    title: "Aplikasi Sewa Bus",
+    title: "Bus Rental Application",
     description:
-      "Aplikasi Android menentukan harga sewa bus dengan Decision Tree.",
+      "An Android application that calculates bus rental pricing using a Decision Tree algorithm to provide accurate and data-driven estimates.",
     image: "/project/bus.jpg",
     icon: ["FaFlutter", "FaPython", "SiFlask", "SiMysql"],
     link: "https://github.com/SamudraWijayas/bus-rental-application.git",
   },
   {
-    title: "Manajemen Database",
-    description: "Sistem Manajemen pembinaan dari kecil hingga dewasa.",
+    title: "Database Management System",
+    description:
+      "A web-based management system designed to manage organizational development data from early stages through adulthood.",
     image: "/project/manajemen.png",
     icon: ["FaReact", "RiTailwindCssFill", "FaNodeJs", "SiExpress", "SiMysql"],
     link: "",
   },
   {
-    title: "Absensi Kegiatan",
-    description: "Sistem absensi kegiatan berbasis web Laravel.",
+    title: "Activity Attendance System",
+    description:
+      "A web-based attendance management system built with Laravel to track participation in organizational activities.",
     image: "/project/absen2.png",
     icon: ["FaPhp", "FaLaravel", "RiTailwindCssFill", "SiMysql"],
     link: "",
   },
   {
-    title: "Sistem Layanan Gas",
-    description: "Sistem GIS Gas Subsidi dengan A* (A-Star) di Leaflet.",
+    title: "Gas Distribution Service System",
+    description:
+      "A GIS-based subsidized gas distribution system using the A* (A-Star) algorithm and Leaflet for route optimization and visualization.",
     image: "/project/gas.png",
     icon: [
       "FaReact",
@@ -167,15 +171,17 @@ const projects = [
     link: "https://github.com/SamudraWijayas/sistem-layanan-gas.git",
   },
   {
-    title: "Sistem Prediksi Kemacetan",
-    description: "Prediksi kemacetan dan waktu tempuh menggunakan LSTM.",
+    title: "Traffic Congestion Prediction System",
+    description:
+      "A system that predicts traffic congestion levels and travel time using LSTM (Long Short-Term Memory) machine learning models.",
     image: "/project/kemacetan.png",
     icon: ["FaPython", "SiFlask", "RiTailwindCssFill", "SiLeaflet"],
     link: "https://github.com/SamudraWijayas/sistem-prediksi-kemacetan.git",
   },
   {
-    title: "Aplikasi Absensi QR Code",
-    description: "Aplikasi Android absensi dengan QR Code (Flutter).",
+    title: "QR Code Attendance Application",
+    description:
+      "An Android-based attendance application utilizing QR Code scanning for fast and accurate attendance tracking.",
     image: "/project/absen.png",
     icon: ["FaFlutter", "FaNodeJs", "SiExpress"],
     link: "",
