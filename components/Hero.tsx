@@ -187,7 +187,7 @@ export default function Hero() {
             className="mt-8 flex flex-wrap items-center gap-4"
           >
             <a
-              href="https://drive.google.com/file/d/1muxaeYl9nGnbE3cvQ-pyQs-BNRoEq15_/view?usp=sharing"
+              href="https://drive.google.com/file/d/1QeL-cqiPcT6uuegqb9192F7nHIeLIi0O/view?usp=sharing"
               className="flex items-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition"
               target="_blank"
               rel="noopener noreferrer"
