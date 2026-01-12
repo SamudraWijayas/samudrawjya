@@ -45,7 +45,7 @@ const iconComponents: { [key: string]: JSX.Element } = {
   SiNextui: <SiNextui className="w-6 h-6 text-gray-500" />,
 };
 
-// Data project (TETAP)
+// Data project
 const projects = [
   {
     title: "Mainco",
@@ -190,18 +190,7 @@ const projects = [
 
 const Project = () => {
   const [showAll, setShowAll] = useState(false);
-
-  // 🔥 STATE UNTUK SHOW MORE DESKRIPSI
-  const [expandedDesc, setExpandedDesc] = useState<Record<number, boolean>>({});
-
   const visibleProjects = showAll ? projects : projects.slice(0, 6);
-
-  const toggleDesc = (index: number) => {
-    setExpandedDesc((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
-  };
 
   useEffect(() => {
     AOS.init({
@@ -247,32 +236,17 @@ const Project = () => {
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {projek.title}
               </h1>
-
-              {/* ✅ DESKRIPSI + SHOW MORE */}
-              <p
-                className={`lg:text-xl lg:font-normal font-light text-sm transition-all duration-300 ${
-                  expandedDesc[index] ? "" : "line-clamp-3"
-                }`}
-              >
+              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-3">
                 {projek.description}
               </p>
 
-              {projek.description.length > 120 && (
-                <button
-                  onClick={() => toggleDesc(index)}
-                  className="mt-1 text-sm text-blue-400 hover:text-blue-300 transition"
-                >
-                  {expandedDesc[index] ? "Show less" : "Show more"}
-                </button>
-              )}
-
               <div className="flex items-center justify-start mt-7 mb-3 space-x-3">
-                {projek.icon.map((iconKey, i) =>
+                {projek.icon.map((iconKey, index) =>
                   iconComponents[iconKey] ? (
                     <div
                       key={iconKey}
                       className="border border-white/[0.2] rounded-3xl bg-[#10172a]/60 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{ transform: `translateX(-${5 * i * 4}px)` }}
+                      style={{ transform: `translateX(-${5 * index * 4}px)` }}
                     >
                       {iconComponents[iconKey]}
                     </div>
