@@ -17,6 +17,7 @@ import {
   SiAntdesign,
   SiLeaflet,
   SiNextui,
+  SiPrisma,
 } from "react-icons/si";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -30,6 +31,7 @@ const iconComponents: { [key: string]: JSX.Element } = {
   FaNodeJs: <FaNodeJs className="w-6 h-6 text-green-500" />,
   SiMongodb: <SiMongodb className="w-6 h-6 text-green-500" />,
   RiNextjsLine: <RiNextjsLine className="w-6 h-6 text-gray-500" />,
+  SiPrisma: <SiPrisma className="w-6 h-6 text-gray-500" />,
   BsBootstrap: <BsBootstrap className="w-6 h-6 text-purple-600" />,
   FaFlutter: <FaFlutter className="w-6 h-6 text-blue-500" />,
   SiTypescript: <SiTypescript className="w-6 h-6 text-blue-500" />,
@@ -106,6 +108,22 @@ const projects = [
       "SiMongodb",
     ],
     link: "https://www.jokindess.com/",
+  },
+  {
+    title: "PPG Balam",
+    description: "A website aimed at and focused on youth development",
+    image: "/project/ppg.png",
+    icon: [
+      "RiNextjsLine",
+      "RiTailwindCssFill",
+      "SiNextui",
+      "SiTypescript",
+      "FaNodeJs",
+      "SiExpress",
+      "SiMysql",
+      "SiPrisma",
+    ],
+    link: "",
   },
   {
     title: "PRC Car Rental",
@@ -250,7 +268,7 @@ const Project = () => {
                     >
                       {iconComponents[iconKey]}
                     </div>
-                  ) : null
+                  ) : null,
                 )}
               </div>
             </PinContainer>
