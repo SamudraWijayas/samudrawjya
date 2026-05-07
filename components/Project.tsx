@@ -50,6 +50,30 @@ const iconComponents: { [key: string]: JSX.Element } = {
 // Data project
 const projects = [
   {
+    title: "Travel & Tour",
+    description:
+      "A modern travel & tour website designed to showcase travel packages, destinations, and make it easy for users to explore and book tourism services online with a clean and user-friendly interface",
+    image: "/project/travel.png",
+    icon: [
+      "RiNextjsLine",
+      "RiTailwindCssFill",
+      "SiTypescript",
+    ],
+    link: "https://travel.jokindes.com/",
+  },
+  {
+    title: "E-commerce",
+    description:
+      "A modern e-commerce platform built to display products, manage catalogs, and provide a seamless online shopping experience with a responsive and user-friendly interface",
+    image: "/project/store.png",
+    icon: [
+      "RiNextjsLine",
+      "RiTailwindCssFill",
+      "SiTypescript",
+    ],
+    link: "https://store.jokindes.com/",
+  },
+  {
     title: "Mainco",
     description:
       "Corporate website for a robotic construction company, showcasing services, technology solutions, and company profile with a modern and professional interface.",
@@ -93,7 +117,7 @@ const projects = [
       "SiMongodb",
       "SiExpress",
     ],
-    link: "https://tiket.jokindess.com",
+    link: "https://tiket.jokindes.com",
   },
   {
     title: "Joki Ndess",
@@ -107,7 +131,7 @@ const projects = [
       "SiTypescript",
       "SiMongodb",
     ],
-    link: "https://www.jokindess.com/",
+    link: "https://www.jokindes.com/",
   },
   {
     title: "PPG Balam",
